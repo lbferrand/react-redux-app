@@ -1,16 +1,35 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-function Greeting() {
-  return <div>
-    <Person />
-    <Message />
-  </div>;
+import './index.css';
+
+function BookList() {
+  return (
+    <section>
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+    </section>
+  )
 }
 
-const Person = () => <h2>My name is John Doe</h2>
-const Message = () => <p>Here is my message</p>
+const Book = () => {
+  return (
+    <article>
+      <Image />
+      <Title />
+      <Author />
+    </article>
+  )
+}
+
+const Image = () => <img src="https://m.media-amazon.com/images/I/71ODaT072wL._AC_UL320_.jpg" alt="Things We Never Got Over"/>;
+const Title = () => {
+  return <h2>Things We Never Got Over</h2>
+};
+const Author = () => <h4>Lucy Score</h4>
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<Greeting />);
+root.render(<BookList />);

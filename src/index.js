@@ -3,9 +3,9 @@ import ReactDOM from "react-dom/client";
 
 import './index.css';
 
-function BookList() {
+const BookList = () => {
   return (
-    <section>
+    <section className="booklist">
       <Book />
       <Book />
       <Book />
@@ -16,7 +16,7 @@ function BookList() {
 
 const Book = () => {
   return (
-    <article>
+    <article className="book">
       <Image />
       <Title />
       <Author />
@@ -24,11 +24,11 @@ const Book = () => {
   )
 }
 
-const Image = () => <img src="https://m.media-amazon.com/images/I/71ODaT072wL._AC_UL320_.jpg" alt="Things We Never Got Over"/>;
+const Image = () => <img src='./images/book1.jpg' alt="Things We Never Got Over"/>;
 const Title = () => {
   return <h2>Things We Never Got Over</h2>
 };
-const Author = () => <h4>Lucy Score</h4>
+const Author = () => <h4 style={{color:'#617d98', fontSize:'0.75rem', marginTop:'0.5rem'}}>Lucy Score</h4>
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 

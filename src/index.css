@@ -68,5 +68,10 @@ body {
     border-top-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
     background: #7918da;
+}
 
+h1 {
+    text-align: center;
+    margin-top: 4rem;
+    text-transform: capitalize;
 }
